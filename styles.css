@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.row {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#header-title {
+  letter-spacing: 5px;
+  color: white;
+  text-shadow: 0px 5px 20px white, 0px 5px 20px white;
+}
+
+.form-control {
+  font-size: 20px;
+  outline: none;
+  background: black;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+#main {
+  background: #1f1d1d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.boxx {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #1f1d1d, #1a1818);
+  box-shadow: 41px 41px 82px #0f0e0e, -41px -41px 82px #2c2929;
+  padding: 30px;
+  margin: 10px;
+  width: 600px;
+  height: 600px;
+}
+
+.title {
+  font-size: 30px;
+  color: white;
+  text-decoration: underline;
+}
+
+.mr-2 {
+  background-color: #1f1d1d;
+  width: 250px;
+}
+
+.btn-dark {
+  font-size: 15px;
+  border: 2px solid white;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #1f1d1d;
+  margin: 5px;
+  transition: 0.5s ease;
+}
+
+.btn-dark:hover{
+    box-shadow: 0px 5px 20px white,0px 5px 20px white;
+}
+
+.list-group {
+  border: 2px solid white;
+  font-size: 50px;
+  border-radius: 25px;
+  width: 500px;
+  padding: 20px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 30px;
+  margin: 20px;
+  color: white;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-sm {
+  color: white;
+  background-color: #1f1d1d;
+  width: 40px;
+  font-size: 20px;
+  border: none;
+  transition: 0.4s ease;
+}
+
+.btn-sm:hover{
+    transform: rotateX(360deg);
+    box-shadow: 0px 5px 20px white,0px 5px 20px white;
+}
