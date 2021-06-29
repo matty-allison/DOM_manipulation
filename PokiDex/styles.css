@@ -6,20 +6,25 @@ body {
   object-fit: cover;
   color: black;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-attachment: fixed;
 }
 
 body h1 {
   letter-spacing: 3px;
   font-size: 60px;
-  padding: 5px 15px;
+  padding: 5px 5px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  margin-left: 700px;
+  justify-content: center;
 }
 
 .pokemon-info img {
   margin: 10px;
-  width: 300px;
-  height: 250px;
+  width: 400px;
+  height: 400px;
 }
 
 .pokemon-info {
@@ -27,32 +32,56 @@ body h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  right: 25%;
+  top: 20%;
+  padding: 50px;
 }
 
 .pokemon-list-container {
   display: flex;
-  justfiy-content: center;
+  /* align-items: center; */
+  text-align: center;
+  gap: 0;
   flex-wrap: wrap;
-  /*   flex-direction: column; */
+  flex-direction: column;
   padding-left: 120px;
   padding-right: 100px;
   padding-bottom: 30px;
 }
 
-.pokemon-list-container button {
-  padding: 10px;
-  border: solid 2px #e73d22;
-  background: black;
-  border-radius: 5px;
-  color: #e73d22;
-  font-size: 35px;
-  margin: 5px;
-  transition: 0.4s ease;
+.pokemon-list-container img {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  border-radius: 100%;
+  align-items: center;
 }
 
-.pokemon-list-container button:hover {
-    background: #e73d22;
-    color: black;
+.pokemon-list-container img:hover {
+  animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+  100% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(246, 66, 37, 0);
+  }
+
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(246, 66, 37, 0.7);
+  }
+}
+
+.pokemon-list-container p {
+  font-size: 50px;
+  font-family: "Kirang Haerang", cursive;
 }
 
 .info {
@@ -60,32 +89,42 @@ body h1 {
   color: white;
 }
 
+.previousnext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .previousbtn {
   padding: 10px;
-  margin: 5px;
+  margin: 30px;
   font-size: 15px;
   background: black;
   color: white;
   font-weight: 700;
+  position: fixed;
+  bottom: 0;
   border: solid 2px white;
   transition: 0.8s;
 }
-.previousbtn:hover{
-    color: black;
-    background: white;
+.previousbtn:hover {
+  color: black;
+  background: white;
 }
 
 .nextbtn {
   padding: 10px;
-  margin: 5px;
+  margin: 30px;
   font-size: 15px;
   background: white;
   color: black;
   font-weight: 700;
+  position: fixed;
+  top: 0;
   border: solid 2px black;
   transition: 0.8s;
 }
-.nextbtn:hover{
-    color: white;
-    background: black;
+.nextbtn:hover {
+  color: white;
+  background: black;
 }

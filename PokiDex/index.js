@@ -11,7 +11,7 @@ function getPokemonList(url) {
       let container = document.querySelector(".pokemon-list-container");
       container.innerHTML = "";
       pokemon.forEach((btn) => {
-        container.innerHTML += `<button onclick="getPokemonInfo('${btn.url}')">${btn.name}</button>`;
+        container.innerHTML += `<img onclick="getPokemonInfo('${btn.url}')" src="pokeball.png"><p>${btn.name}</p>`;
       });
       let nextPrevious = document.querySelector(".previousnext");
       nextPrevious.innerHTML = ""
