@@ -11,10 +11,10 @@ function getPokemonList(url) {
       let container = document.querySelector(".pokemon-list-container");
       container.innerHTML = "";
       pokemon.forEach((btn) => {
-        container.innerHTML += `<img onclick="getPokemonInfo('${btn.url}')" src="pokeball.png"><p>${btn.name}</p>`;
+        container.innerHTML += `<img onclick="getPokemonInfo('${btn.url}')" src="unnamed.png"><p>${btn.name}</p>`;
       });
       let nextPrevious = document.querySelector(".previousnext");
-      nextPrevious.innerHTML = ""
+      nextPrevious.innerHTML = "";
       nextPrevious.innerHTML += `<button class="previousbtn" onclick="getPokemonList('${data.previous}')">Previous</button>`;
       nextPrevious.innerHTML += `<button class="nextbtn" onclick="getPokemonList('${data.next}')">Next</button>`;
     });
@@ -26,18 +26,15 @@ function getPokemonInfo(url) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       document.querySelector(".pokemon-info").innerHTML = `
-    <img src="${data.sprites.front_default} "> <p class="info">${data.name}</p>
+    <button onclick="togglePopup()" class="closebtn">X</button><img src="${data.sprites.front_default} "><div class="containerInfo"><p class="info">${data.name}</p><p class="info">Height: ${data.height}</p><p class="info">weight: ${data.weight}</p><p class="info">Type: ${data.types[0].type.name}</div>
     `;
+      togglePopup();
     });
 }
 
-// function getPokemonInfo(url) {
-//   fetch(url)
-//   .then(res => res.json())
-//   .then((data) => {
-//     console.log(data)
-//     document.querySelector(".name").innerHTML = `<p class="info">${data.name}</p>`;
-//   })
-// }
+function togglePopup() {
+  // console.log("hello");
+  document.getElementsByClassName("pokemon-info")[0].classList.toggle("active");
+}
