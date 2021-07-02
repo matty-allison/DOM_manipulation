@@ -28,7 +28,7 @@ function getPokemonInfo(url) {
     .then((data) => {
       // console.log(data);
       document.querySelector(".pokemon-info").innerHTML = `
-    <button onclick="togglePopup()" class="closebtn">X</button><img src="${data.sprites.front_default} "><div class="containerInfo"><p class="info">${data.name}</p><p class="info">Height: ${data.height}</p><p class="info">weight: ${data.weight}</p><p class="info">Type: ${data.types[0].type.name}</div>
+    <button onclick="togglePopup()" class="closebtn">X</button><img src="${data.sprites.other["official-artwork"].front_default} "><div class="containerInfo"><p class="info">${data.name}</p><p class="info">Height: ${data.height}</p><p class="info">weight: ${data.weight}</p><p class="info">Type: ${data.types[0].type.name}</div>
     `;
       togglePopup();
     });
